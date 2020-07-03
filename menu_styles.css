@@ -1,0 +1,135 @@
+@font-face {
+    src: url(fonts/MonumentExtended-Regular.otf);
+    font-family: Monument;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(hero-img.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.hero-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+.wrapper_menu {
+    position: fixed;
+    z-index: 2;
+}
+
+.navbar {
+    box-sizing: border-box;
+    position: fixed;
+    width: 6%;
+    height: 100vh;
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2.4px solid #fff;
+    opacity: 0.4;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    transform: rotate(-90deg);
+    font-family: Monument;
+    color: black;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.nav {
+    position: fixed;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    left: 6%;
+    background: white;
+    z-index: 10;
+}
+
+.nav-items {
+    margin: 30px 60px;
+}
+
+.nav-item {
+    position: relative;
+    font-size: 90px;
+    height: 130px;
+}
+
+.nav-item a {
+    position: relative;
+    top: 100px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: Monument;
+    font-size: 100px;
+    font-weight: lighter;
+    letter-spacing: -8px;
+    transition: 1s;
+}
+
+.nav-item-wrapper:after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    background: white;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+.nav-item:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: yellow;
+    transition: 0.3s;
+}
+
+.nav-item:hover:after {
+    width: 100%;
+}
+
+@media (max-width: 990px) {
+
+    html,
+    body {
+        overflow: hidden;
+    }
+
+    .navbar {
+        width: 16%;
+    }
+
+    .nav {
+        left: 16%;
+    }
+
+    .nav-item a {
+        font-size: 40px;
+        letter-spacing: 0;
+    }
+
+    .nav-item:after {
+        display: none;
+    }
+}
